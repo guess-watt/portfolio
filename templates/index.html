@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container hero-content">
+        <h1 class="animate-text">Anwin Jojo</h1>
+        <p class="secondary-text animate-text" style="animation-delay: 0.1s;">MCA Student & Aspiring Software Developer
+        </p>
+        <p class="animate-text"
+            style="color: #86868b; margin-top: 1rem; max-width: 600px; margin-left: auto; margin-right: auto; animation-delay: 0.2s;">
+            Curious student eager to build. Physics background. Critical thinker. Chess player.
+        </p>
+        <div class="animate-text" style="animation-delay: 0.3s; margin-top: 2rem;">
+            <a href="#contact" class="hero-cta">Get in Touch <i class="fas fa-chevron-right"
+                    style="font-size: 0.8rem;"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section id="education">
+    <div class="container">
+        <h2 class="section-title reveal">Education</h2>
+        <div class="grid-container reveal">
+            <div class="card">
+                <h3>Masters in Computer Applications (MCA)</h3>
+                <span class="card-subtitle">Rajagiri College of Social Sciences | Pursuing</span>
+                <p class="card-description">Focusing on advanced software development and computer science fundamentals.
+                </p>
+            </div>
+            <div class="card">
+                <h3>BSc Physics</h3>
+                <span class="card-subtitle">SH College Thevara | 9.07 CGPA</span>
+                <p class="card-description">Deep dive into physical laws, mathematics, and analytical problem-solving.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" style="background-color: #0d0d0d;">
+    <div class="container">
+        <h2 class="section-title reveal">Technical Skills</h2>
+        <div class="skills-container reveal">
+            {% set skills = ['C', 'Java', 'Python', 'HTML', 'CSS', 'JavaScript', 'React', 'Git'] %}
+            {% for skill in skills %}
+            <div class="skill-tag">{{ skill }}</div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <div class="container">
+        <h2 class="section-title reveal">Projects</h2>
+        <div class="grid-container reveal">
+            <div class="card">
+                <h3>Galactic Rotation Mapping</h3>
+                <span class="card-subtitle">Python & Radio Telescope Data</span>
+                <p class="card-description">Plotted the rotational velocity of the Milky Way galaxy using radio
+                    telescope data and Python analysis.</p>
+            </div>
+            <div class="card">
+                <h3>Online Sports Website</h3>
+                <span class="card-subtitle">Web Development</span>
+                <p class="card-description">A platform for sports enthusiasts to browse and engage with sports content.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Theatre Ticket Booking</h3>
+                <span class="card-subtitle">Web Application</span>
+                <p class="card-description">Online system for booking movie and theatre tickets with real-time seat
+                    selection.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" style="background-color: #0d0d0d;">
+    <div class="container" style="text-align: center;">
+        <h2 class="section-title reveal">Contact Me</h2>
+        <p class="secondary-text reveal" style="margin-bottom: 2rem;">I am open to discussing new projects, creative
+            ideas, or opportunities to be part of your visions.</p>
+        <div class="reveal">
+            <a href="mailto:anwinasprogramer@gmail.com" class="hero-cta"
+                style="font-size: 1.5rem; justify-content: center;">anwinasprogramer@gmail.com</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

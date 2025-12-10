@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anwin Jojo - Portfolio">
+    <title>Anwin Jojo | Portfolio</title>
+    <!-- Inter Font (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-content">
+            <h2 class="typewriter-text"></h2>
+        </div>
+    </div>
+
+    <canvas id="particles"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">Anwin Jojo</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <div class="container footer-content">
+            <div class="word-assembly" id="wordAssembly"></div>
+            <div class="social-links">
+                <a href="https://github.com/guess-watt" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/anwin-jojo-aa78b0276" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="mailto:anwinasprogramer@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.8rem;">&copy; 2025 Anwin Jojo. Designed with clean
+                simplicity.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/particles.js') }}"></script>
+</body>
+
+</html>
