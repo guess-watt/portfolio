@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body>
+<body class="{% block body_class %}{% endblock %}">
     <!-- Loader -->
     <div id="loader">
         <div class="loader-content">
@@ -44,12 +44,8 @@
     <footer>
         <div class="container footer-content">
             <div class="word-assembly" id="wordAssembly"></div>
-            <div class="social-links">
-                <a href="https://github.com/guess-watt" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/anwin-jojo-aa78b0276" target="_blank"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="mailto:anwinasprogramer@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
+            <div class="word-assembly" id="wordAssembly"></div>
+            <!-- Social links removed as they are now in the Contact section -->
             <p style="color: var(--text-secondary); font-size: 0.8rem;">&copy; 2025 Anwin Jojo. Designed with clean
                 simplicity.</p>
         </div>

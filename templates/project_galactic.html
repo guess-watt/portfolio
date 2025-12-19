@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block body_class %}project-mode{% endblock %}
+
+{% block content %}
+<div class="milky-way-bg">
+    <div class="static-stars"></div>
+    <div class="milky-way-band"></div>
+    <div class="shooting-stars"></div>
+</div>
+
+<section class="project-hero">
+    <div class="container hero-content">
+        <h1 class="animate-text project-title">Galactic Rotation Mapping</h1>
+        <p class="secondary-text animate-text" style="animation-delay: 0.1s;">Unveiling the Dark Matter Mystery</p>
+    </div>
+</section>
+
+<section class="project-details">
+    <div class="container">
+        <div class="detail-block reveal">
+            <h2>The Project</h2>
+            <p>This project involves analyzing the rotation curve of the Milky Way galaxy using radio telescope data. By
+                plotting the rotational velocity of stars and gas against their distance from the galactic center, we
+                can observe discrepancies between predicted and observed velocities—a key piece of evidence for the
+                existence of Dark Matter.</p>
+        </div>
+
+        <div class="detail-block reveal">
+            <h2>Methodology</h2>
+            <p>Using the 21cm hydrogen line, we measured the Doppler shift of neutral hydrogen clouds in the galaxy.
+                This data allows us to calculate the velocity of these clouds relative to us. By applying geometric
+                models of the galaxy, these relative velocities are converted into orbital velocities at various radii.
+            </p>
+        </div>
+
+        <div class="detail-block reveal">
+            <h2>Results</h2>
+            <p>The resulting rotation curve remains flat at large distances from the center, rather than declining as
+                expected from Keplerian dynamics based on visible mass alone. This "flat rotation curve" suggests that a
+                significant amount of mass—Dark Matter—exists in the halo of our galaxy, providing the gravitational
+                force needed to maintain these high velocities.</p>
+        </div>
+
+        <div class="detail-block reveal center-content">
+            <a href="{{ url_for('index') }}" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
