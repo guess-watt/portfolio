@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 <!-- Hero Section -->
 <section class="hero" id="about">
     <div class="container hero-content">
-        <img src="{{ url_for('static', filename='images/profile_placeholder.png') }}" alt="Anwin Jojo"
-            class="profile-photo animate-text">
         <h1 class="animate-text">Anwin Jojo</h1>
         <p class="secondary-text animate-text" style="animation-delay: 0.1s;">MCA Student & Aspiring Software Developer
         </p>
@@ -46,7 +45,7 @@
     <div class="container">
         <h2 class="section-title reveal">Technical Skills</h2>
         <div class="skills-container reveal">
-            {% set skills = ['C', 'Java', 'Python', 'HTML', 'CSS', 'JavaScript', 'React', 'Git'] %}
+            {% set skills = ['C', 'Java', 'Python', 'HTML', 'CSS', 'JavaScript', 'Django', 'Git', 'SQL'] %}
             {% for skill in skills %}
             <div class="skill-tag">{{ skill }}</div>
             {% endfor %}
@@ -68,16 +67,50 @@
                         class="fas fa-arrow-right"></i></a>
             </div>
             <div class="card">
-                <h3>Online Sports Website</h3>
+                <h3>Online Sports Shop(mini project)</h3>
                 <span class="card-subtitle">Web Development</span>
-                <p class="card-description">A platform for sports enthusiasts to browse and engage with sports content.
+                <p class="card-description">A platform for sports enthusiasts to buy and review sports equipment.
                 </p>
             </div>
             <div class="card">
-                <h3>Theatre Ticket Booking</h3>
+                <h3>Theatre Ticket Booking(mini project)</h3>
                 <span class="card-subtitle">Web Application</span>
-                <p class="card-description">Online system for booking movie and theatre tickets with real-time seat
-                    selection.</p>
+                <p class="card-description">Online system for booking movie and theatre tickets
+
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certificates Section -->
+<section id="certificates" style="min-height: auto; padding: 4rem 0;">
+    <div class="container">
+        <h2 class="section-title reveal">Certificates</h2>
+        <div class="grid-container reveal">
+            <div class="card certificate-card"
+                onclick="openCertificate('/static/images/ibm_rag_cert.jpg', 'Modern RAG Strategies with IBM')">
+                <h3>Modern RAG Strategies</h3>
+                <span class="card-subtitle">IBM Developer</span>
+                <p class="card-description">View Certificate <i class="fas fa-external-link-alt"></i></p>
+            </div>
+            <div class="card certificate-card"
+                onclick="openCertificate('/static/images/data_science_scalar.png', 'Data Science - Scalar')">
+                <h3>Data Science</h3>
+                <span class="card-subtitle">Scalar</span>
+                <p class="card-description">View Certificate <i class="fas fa-external-link-alt"></i></p>
+            </div>
+            <div class="card certificate-card"
+                onclick="openCertificate('/static/images/cert_python_embedded.jpg', 'Python Programming and Embedded Systems')">
+                <h3>Python Programming & Embedded Systems</h3>
+                <span class="card-subtitle">DCS Robotics | A+ Grade</span>
+                <p class="card-description">View Certificate <i class="fas fa-external-link-alt"></i></p>
+            </div>
+            <div class="card certificate-card"
+                onclick="openCertificate('/static/images/coursera_python_ust.jpg', 'Programming in Python - UST')">
+                <h3>Programming in Python</h3>
+                <span class="card-subtitle">Coursera | UST</span>
+                <p class="card-description">View Certificate <i class="fas fa-external-link-alt"></i></p>
             </div>
         </div>
     </div>
@@ -98,4 +131,14 @@
         </div>
     </div>
 </section>
+
+<!-- Certificate Modal -->
+<div id="cert-modal" class="modal">
+    <span class="close-modal">&times;</span>
+    <div class="modal-content">
+        <img id="cert-image" src="" alt="Certificate" style="display: none;">
+        <iframe id="cert-pdf" src="" style="display: none; width: 100%; height: 80vh; border: none;"></iframe>
+        <div id="cert-caption"></div>
+    </div>
+</div>
 {% endblock %}

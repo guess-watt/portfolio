@@ -2,7 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Loader - Typewriter Effect
     const loader = document.getElementById('loader');
     const textElement = document.querySelector('.typewriter-text');
-    const textToType = "Good things take time";
+
+    // Custom loader text based on page
+    let textToType = "Good things take time";
+    if (document.body.classList.contains('project-mode')) {
+        textToType = "Galactic Rotation Curve";
+    }
+
     let index = 0;
 
     function typeWriter() {
@@ -210,3 +216,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initShootingStars();
 });
+
+// Certificate Modal Logic
+function openCertificate(imgSrc, captionText) {
+    const modal = document.getElementById('cert-modal');
+    const modalImg = document.getElementById('cert-image');
+    const caption = document.getElementById('cert-caption');
+
+    modal.style.display = "block";
+    modalImg.style.display = "block";
+    modalImg.src = imgSrc;
+    caption.innerHTML = captionText;
+
+    // Close on click anywhere outside or on close button
+    const span = document.getElementsByClassName("close-modal")[0];
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
