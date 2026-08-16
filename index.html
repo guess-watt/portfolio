@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anwin Jojo - Portfolio">
+    <title>Anwin Jojo | Portfolio</title>
+    <!-- Inter Font (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/stars.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-content">
+            <h2 class="typewriter-text"></h2>
+        </div>
+    </div>
+
+    <canvas id="particles"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">Anwin Jojo</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="container hero-content">
+            <h1 class="animate-text">Anwin Jojo</h1>
+            <p class="secondary-text animate-text" style="animation-delay: 0.1s;">MCA Student & Aspiring Software Developer</p>
+            <p class="animate-text" style="color: #86868b; margin-top: 1rem; max-width: 600px; margin-left: auto; margin-right: auto; animation-delay: 0.2s;">
+                Curious student eager to build. Physics background. Critical thinker. Chess player.
+            </p>
+            <div class="animate-text" style="animation-delay: 0.3s; margin-top: 2rem;">
+                <a href="#contact" class="hero-cta">Get in Touch <i class="fas fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title reveal">Education</h2>
+            <div class="grid-container reveal">
+                <div class="card">
+                    <h3>Masters in Computer Applications (MCA)</h3>
+                    <span class="card-subtitle">Rajagiri College of Social Sciences | Pursuing</span>
+                    <p class="card-description">Focusing on advanced software development and computer science fundamentals.</p>
+                </div>
+                <div class="card">
+                    <h3>BSc Physics</h3>
+                    <span class="card-subtitle">SH College Thevara | 9.07 CGPA</span>
+                    <p class="card-description">Deep dive into physical laws, mathematics, and analytical problem-solving.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title reveal">Technical Skills</h2>
+            <div class="skills-container reveal">
+                <div class="skill-tag">C</div>
+                <div class="skill-tag">Java</div>
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">HTML</div>
+                <div class="skill-tag">CSS</div>
+                <div class="skill-tag">JavaScript</div>
+                <div class="skill-tag">Django</div>
+                <div class="skill-tag">Git</div>
+                <div class="skill-tag">SQL</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title reveal">Projects</h2>
+            <div class="grid-container reveal">
+                <div class="card">
+                    <h3>Galactic Rotation Mapping</h3>
+                    <span class="card-subtitle">Python & Radio Telescope Data</span>
+                    <p class="card-description">Plotted the rotational velocity of the Milky Way galaxy using radio telescope data and Python analysis.</p>
+                    <a href="project_galactic.html" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="card">
+                    <h3>Online Sports Shop(mini project)</h3>
+                    <span class="card-subtitle">Web Development</span>
+                    <p class="card-description">A platform for sports enthusiasts to buy and review sports equipment.</p>
+                </div>
+                <div class="card">
+                    <h3>Theatre Ticket Booking(mini project)</h3>
+                    <span class="card-subtitle">Web Application</span>
+                    <p class="card-description">Online system for booking movie and theatre tickets</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" style="min-height: auto; padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title reveal">Certificates</h2>
+            <div class="grid-container reveal">
+                <div class="card certificate-card" onclick="openCertificate('static/images/ibm_rag_cert.jpg', 'Modern RAG Strategies with IBM')">
+                    <h3>Modern RAG Strategies</h3>
+                    <span class="card-subtitle">IBM Developer</span>
+                    <p class="card-description">View Certificate <i class="fas fa-external-link-alt"></i></p>
+                </div>
+                <div class="card certificate-card" onclick="openCertificate('static/images/data_science_scalar.png', 'Data Science - Scalar')">
+                    <h3>Data Science</h3>
+                    <span class="card-subtitle">Scalar</span>
+                    <p class="card-description">View Certificate <i class="fas fa-external-link-alt"></i></p>
+                </div>
+                <div class="card certificate-card" onclick="openCertificate('static/images/cert_python_embedded.jpg', 'Python Programming and Embedded Systems')">
+                    <h3>Python Programming & Embedded Systems</h3>
+                    <span class="card-subtitle">DCS Robotics | A+ Grade</span>
+                    <p class="card-description">View Certificate <i class="fas fa-external-link-alt"></i></p>
+                </div>
+                <div class="card certificate-card" onclick="openCertificate('static/images/coursera_python_ust.jpg', 'Programming in Python - UST')">
+                    <h3>Programming in Python</h3>
+                    <span class="card-subtitle">Coursera | UST</span>
+                    <p class="card-description">View Certificate <i class="fas fa-external-link-alt"></i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title reveal">Contact Me</h2>
+            <p class="secondary-text reveal" style="margin-bottom: 2rem;">I am open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+            <div class="reveal social-links" style="justify-content: center; margin-top: 1rem;">
+                <a href="https://github.com/guess-watt" target="_blank" class="contact-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/anwin-jojo-aa78b0276" target="_blank" class="contact-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:anwinasprogramer@gmail.com" class="contact-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Modal -->
+    <div id="cert-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <img id="cert-image" src="" alt="Certificate" style="display: none;">
+            <iframe id="cert-pdf" src="" style="display: none; width: 100%; height: 80vh; border: none;"></iframe>
+            <div id="cert-caption"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="word-assembly" id="wordAssembly"></div>
+            <p style="color: var(--text-secondary); font-size: 0.8rem;">&copy; 2025 Anwin Jojo. Designed with clean simplicity.</p>
+        </div>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+    <script src="static/js/particles.js"></script>
+</body>
+
+</html>
